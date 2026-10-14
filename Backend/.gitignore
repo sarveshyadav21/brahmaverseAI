@@ -1,0 +1,25 @@
+node_modules/
+
+# Environment — NEVER commit these
+.env
+.env.local
+.env.*.local
+
+# Prisma generated client
+node_modules/.prisma/
+
+# Logs
+*.log
+!test-execution.log
+logs/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Coverage
+coverage/

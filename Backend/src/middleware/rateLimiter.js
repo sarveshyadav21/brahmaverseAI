@@ -1,0 +1,31 @@
+'use strict';
+
+const rateLimit = require('express-rate-limit');
+
+const noop = (req, res, next) => next();
+
+/** 10 submissions per 15 minutes per IP — bypassed in test mode */
+const enquiryLimiter =
+  process.env.NODE_ENV === 'test'
+    ? noop
+    : rateLimit({
+        windowMs: 15 * 60 * 1000,
+        max: 10,
+        standardHeaders: true,
+        legacyHeaders: false,
+        message: { success: false, message: 'Too many submissions. Please try again later.' },
+      });
+
+/** Stricter limit on login — 10 attempts per 15 minutes per IP — bypassed in test mode */
+const loginLimiter =
+  process.env.NODE_ENV === 'test'
+    ? noop
+    : rateLimit({
+        windowMs: 15 * 60 * 1000,
+        max: 10,
+        standardHeaders: true,
+        legacyHeaders: false,
+        message: { success: false, message: 'Too many login attempts. Please try again later.' },
+      });
+
+module.exports = { enquiryLimiter, loginLimiter };

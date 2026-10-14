@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  // directUrl uses the non-pooled connection — required for Prisma migrations on Neon
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+model Employee {
+  id           Int       @id @default(autoincrement())
+  name         String
+  email        String    @unique
+  passwordHash String    @map("password_hash")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+  enquiries    Enquiry[]
+
+  @@map("employees")
+}
+
+model Enquiry {
+  id             Int       @id @default(autoincrement())
+  name           String
+  email          String
+  phone          String?
+  courseInterest String    @map("course_interest")
+  message        String?
+  claimedById    Int?      @map("claimed_by")
+  claimedBy      Employee? @relation(fields: [claimedById], references: [id])
+  claimedAt      DateTime? @map("claimed_at")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+
+  @@index([claimedById])
+  @@map("enquiries")
+}

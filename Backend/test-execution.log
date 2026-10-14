@@ -1,0 +1,2483 @@
+====================================================================================================
+                          CRM BACKEND — TEST EXECUTION & API AUDIT REPORT
+====================================================================================================
+Generated At         : 10/14/2026, 1:20:35 PM (2026-10-14T07:50:35.265Z)
+Total Duration       : 229.54 s
+Test Suites          : 3 passed, 0 failed, 3 total
+Test Cases           : 36 passed, 0 failed, 36 total
+API Calls Executed   : 168 total calls captured
+====================================================================================================
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+[SUITE] tests\claim.concurrency.test.js  —  PASSED (119.35s)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+  ✔ [PASS] Enquiry Claim Concurrency Suite 1. 20 parallel claims on one enquiry by 20 different employees yields exactly one 200 and nineteen 409 (10199 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/1/claim  →  Status: 200 (3796.55 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 1,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964017497_oxelu0diaq@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:46:59.442Z",
+    │                          "createdAt": "2026-10-14T07:46:57.499Z",
+    │                          "updatedAt": "2026-10-14T07:46:59.445Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 PATCH /api/enquiries/1/claim  →  Status: 409 (6246.64 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #3 PATCH /api/enquiries/1/claim  →  Status: 409 (6262.46 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #4 PATCH /api/enquiries/1/claim  →  Status: 409 (6268.72 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #5 PATCH /api/enquiries/1/claim  →  Status: 409 (6280.21 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #6 PATCH /api/enquiries/1/claim  →  Status: 409 (6273.05 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #7 PATCH /api/enquiries/1/claim  →  Status: 409 (6285.63 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #8 PATCH /api/enquiries/1/claim  →  Status: 409 (6299.9 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #9 PATCH /api/enquiries/1/claim  →  Status: 409 (6308.49 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #10 PATCH /api/enquiries/1/claim  →  Status: 409 (6332.28 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #11 PATCH /api/enquiries/1/claim  →  Status: 409 (6328.72 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #12 PATCH /api/enquiries/1/claim  →  Status: 409 (6341.52 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #13 PATCH /api/enquiries/1/claim  →  Status: 409 (6354.95 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #14 PATCH /api/enquiries/1/claim  →  Status: 409 (6370.96 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #15 PATCH /api/enquiries/1/claim  →  Status: 409 (6418.06 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #16 PATCH /api/enquiries/1/claim  →  Status: 409 (6463.22 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #17 PATCH /api/enquiries/1/claim  →  Status: 409 (6464.32 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #18 PATCH /api/enquiries/1/claim  →  Status: 409 (6487.03 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #19 PATCH /api/enquiries/1/claim  →  Status: 409 (6507.28 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #20 PATCH /api/enquiries/1/claim  →  Status: 409 (6501.08 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Enquiry Claim Concurrency Suite 2. The same user claims the same enquiry twice (sequentially, then in parallel): both return 200, claimedAt unchanged (19088 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/2/claim  →  Status: 200 (3652.43 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 2,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964027700_socxcyag5u@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:47:09.547Z",
+    │                          "createdAt": "2026-10-14T07:47:07.703Z",
+    │                          "updatedAt": "2026-10-14T07:47:09.549Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 PATCH /api/enquiries/2/claim  →  Status: 200 (3741.05 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 2,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964027700_socxcyag5u@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:47:09.547Z",
+    │                          "createdAt": "2026-10-14T07:47:07.703Z",
+    │                          "updatedAt": "2026-10-14T07:47:09.549Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #3 PATCH /api/enquiries/3/claim  →  Status: 200 (3626.41 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 3,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964038808_3awfoq1fjl@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:47:20.986Z",
+    │                          "createdAt": "2026-10-14T07:47:18.810Z",
+    │                          "updatedAt": "2026-10-14T07:47:20.988Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #4 PATCH /api/enquiries/3/claim  →  Status: 200 (4004.44 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 3,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964038808_3awfoq1fjl@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:47:20.986Z",
+    │                          "createdAt": "2026-10-14T07:47:18.810Z",
+    │                          "updatedAt": "2026-10-14T07:47:20.988Z"
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Enquiry Claim Concurrency Suite 3. Claiming a nonexistent id returns 404 (3637 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/99999999/claim  →  Status: 404 (3631.91 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Enquiry not found."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Enquiry Claim Concurrency Suite 4. After a claim, the enquiry is absent from other users GET /public and present only in the winner GET /my (13591 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/4/claim  →  Status: 200 (3664.51 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 4,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964050429_r2imwhz3vzp@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 2,
+    │                          "claimedAt": "2026-10-14T07:47:32.251Z",
+    │                          "createdAt": "2026-10-14T07:47:30.432Z",
+    │                          "updatedAt": "2026-10-14T07:47:32.253Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 GET /api/enquiries/public  →  Status: 200 (2629.25 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [],
+    │                        "pagination": {
+    │                          "total": 0,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 1,
+    │                          "hasNextPage": false,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #3 GET /api/enquiries/my  →  Status: 200 (2917.55 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [
+    │                          {
+    │                            "id": 4,
+    │                            "name": "Rahul Sharma",
+    │                            "email": "enq_1791964050429_r2imwhz3vzp@example.com",
+    │                            "phone": "+91 98765 43210",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Test enquiry message",
+    │                            "claimedById": 2,
+    │                            "claimedAt": "2026-10-14T07:47:32.251Z",
+    │                            "createdAt": "2026-10-14T07:47:30.432Z",
+    │                            "updatedAt": "2026-10-14T07:47:32.253Z"
+    │                          }
+    │                        ],
+    │                        "pagination": {
+    │                          "total": 1,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 1,
+    │                          "hasNextPage": false,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #4 GET /api/enquiries/my  →  Status: 200 (2551.4 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [],
+    │                        "pagination": {
+    │                          "total": 0,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 1,
+    │                          "hasNextPage": false,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Enquiry Claim Concurrency Suite 5. Repeat the 20-way race 5 times in a loop on different enquiries to verify stability without flakiness (61176 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/5/claim  →  Status: 200 (3677.2 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 5,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964064022_upyntst9dwh@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Concurrency iteration 1",
+    │                          "claimedById": 2,
+    │                          "claimedAt": "2026-10-14T07:47:45.921Z",
+    │                          "createdAt": "2026-10-14T07:47:44.023Z",
+    │                          "updatedAt": "2026-10-14T07:47:45.923Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 PATCH /api/enquiries/5/claim  →  Status: 409 (3996.64 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #3 PATCH /api/enquiries/5/claim  →  Status: 409 (4014.06 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #4 PATCH /api/enquiries/5/claim  →  Status: 409 (4020.69 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #5 PATCH /api/enquiries/5/claim  →  Status: 409 (4021.01 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #6 PATCH /api/enquiries/5/claim  →  Status: 409 (4040.16 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #7 PATCH /api/enquiries/5/claim  →  Status: 409 (4060.1 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #8 PATCH /api/enquiries/5/claim  →  Status: 409 (4048.61 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #9 PATCH /api/enquiries/5/claim  →  Status: 409 (4059.91 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #10 PATCH /api/enquiries/5/claim  →  Status: 409 (4050.4 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #11 PATCH /api/enquiries/5/claim  →  Status: 409 (4054.76 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #12 PATCH /api/enquiries/5/claim  →  Status: 409 (4077.58 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #13 PATCH /api/enquiries/5/claim  →  Status: 409 (4082.8 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #14 PATCH /api/enquiries/5/claim  →  Status: 409 (4077.16 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #15 PATCH /api/enquiries/5/claim  →  Status: 409 (4083.68 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #16 PATCH /api/enquiries/5/claim  →  Status: 409 (4097.58 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #17 PATCH /api/enquiries/5/claim  →  Status: 409 (4089.76 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #18 PATCH /api/enquiries/5/claim  →  Status: 409 (4107.13 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #19 PATCH /api/enquiries/5/claim  →  Status: 409 (4106.21 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #20 PATCH /api/enquiries/5/claim  →  Status: 409 (4104.24 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #21 PATCH /api/enquiries/6/claim  →  Status: 200 (3605.67 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 6,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964071786_e729j8jm9xw@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Concurrency iteration 2",
+    │                          "claimedById": 11,
+    │                          "claimedAt": "2026-10-14T07:47:53.702Z",
+    │                          "createdAt": "2026-10-14T07:47:51.788Z",
+    │                          "updatedAt": "2026-10-14T07:47:53.703Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #22 PATCH /api/enquiries/6/claim  →  Status: 409 (4016.6 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #23 PATCH /api/enquiries/6/claim  →  Status: 409 (4315.31 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #24 PATCH /api/enquiries/6/claim  →  Status: 409 (4673.37 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #25 PATCH /api/enquiries/6/claim  →  Status: 409 (5033.44 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #26 PATCH /api/enquiries/6/claim  →  Status: 409 (5425.36 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #27 PATCH /api/enquiries/6/claim  →  Status: 409 (5743.65 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #28 PATCH /api/enquiries/6/claim  →  Status: 409 (6183.44 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #29 PATCH /api/enquiries/6/claim  →  Status: 409 (6515.45 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #30 PATCH /api/enquiries/6/claim  →  Status: 409 (6865.75 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #31 PATCH /api/enquiries/6/claim  →  Status: 409 (7271.53 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #32 PATCH /api/enquiries/6/claim  →  Status: 409 (7575.53 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #33 PATCH /api/enquiries/6/claim  →  Status: 409 (7927.86 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #34 PATCH /api/enquiries/6/claim  →  Status: 409 (8284.1 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #35 PATCH /api/enquiries/6/claim  →  Status: 409 (8732.83 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #36 PATCH /api/enquiries/6/claim  →  Status: 409 (9091.17 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #37 PATCH /api/enquiries/6/claim  →  Status: 409 (9473.77 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #38 PATCH /api/enquiries/6/claim  →  Status: 409 (10180.5 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #39 PATCH /api/enquiries/6/claim  →  Status: 409 (10548.52 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #40 PATCH /api/enquiries/6/claim  →  Status: 409 (10926.26 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #41 PATCH /api/enquiries/7/claim  →  Status: 200 (3715.66 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 7,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964086369_nvrr644jgvo@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Concurrency iteration 3",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:48:08.239Z",
+    │                          "createdAt": "2026-10-14T07:48:06.370Z",
+    │                          "updatedAt": "2026-10-14T07:48:08.240Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #42 PATCH /api/enquiries/7/claim  →  Status: 409 (4001.84 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #43 PATCH /api/enquiries/7/claim  →  Status: 409 (4070.37 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #44 PATCH /api/enquiries/7/claim  →  Status: 409 (4054.02 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #45 PATCH /api/enquiries/7/claim  →  Status: 409 (4068.26 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #46 PATCH /api/enquiries/7/claim  →  Status: 409 (4082.49 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #47 PATCH /api/enquiries/7/claim  →  Status: 409 (4059.11 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #48 PATCH /api/enquiries/7/claim  →  Status: 409 (4438.07 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #49 PATCH /api/enquiries/7/claim  →  Status: 409 (4721.79 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #50 PATCH /api/enquiries/7/claim  →  Status: 409 (5082.46 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #51 PATCH /api/enquiries/7/claim  →  Status: 409 (5437.03 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #52 PATCH /api/enquiries/7/claim  →  Status: 409 (5778.07 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #53 PATCH /api/enquiries/7/claim  →  Status: 409 (6131.32 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #54 PATCH /api/enquiries/7/claim  →  Status: 409 (6504.49 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #55 PATCH /api/enquiries/7/claim  →  Status: 409 (6841.63 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #56 PATCH /api/enquiries/7/claim  →  Status: 409 (7190.94 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #57 PATCH /api/enquiries/7/claim  →  Status: 409 (7522.94 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #58 PATCH /api/enquiries/7/claim  →  Status: 409 (7891.04 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #59 PATCH /api/enquiries/7/claim  →  Status: 409 (8326.56 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #60 PATCH /api/enquiries/7/claim  →  Status: 409 (8688.25 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #61 PATCH /api/enquiries/8/claim  →  Status: 200 (3591.64 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 8,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964098703_m2euh8vs74@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Concurrency iteration 4",
+    │                          "claimedById": 3,
+    │                          "claimedAt": "2026-10-14T07:48:20.594Z",
+    │                          "createdAt": "2026-10-14T07:48:18.704Z",
+    │                          "updatedAt": "2026-10-14T07:48:20.596Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #62 PATCH /api/enquiries/8/claim  →  Status: 409 (3922.01 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #63 PATCH /api/enquiries/8/claim  →  Status: 409 (4039.7 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #64 PATCH /api/enquiries/8/claim  →  Status: 409 (4052.8 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #65 PATCH /api/enquiries/8/claim  →  Status: 409 (4134.66 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #66 PATCH /api/enquiries/8/claim  →  Status: 409 (4272.24 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #67 PATCH /api/enquiries/8/claim  →  Status: 409 (4661.83 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #68 PATCH /api/enquiries/8/claim  →  Status: 409 (5349.17 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #69 PATCH /api/enquiries/8/claim  →  Status: 409 (5712.77 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #70 PATCH /api/enquiries/8/claim  →  Status: 409 (6056.46 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #71 PATCH /api/enquiries/8/claim  →  Status: 409 (6407.66 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #72 PATCH /api/enquiries/8/claim  →  Status: 409 (6781.28 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #73 PATCH /api/enquiries/8/claim  →  Status: 409 (7127.43 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #74 PATCH /api/enquiries/8/claim  →  Status: 409 (7557.27 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #75 PATCH /api/enquiries/8/claim  →  Status: 409 (7919.56 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #76 PATCH /api/enquiries/8/claim  →  Status: 409 (8282.02 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #77 PATCH /api/enquiries/8/claim  →  Status: 409 (8638.31 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #78 PATCH /api/enquiries/8/claim  →  Status: 409 (8970.95 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #79 PATCH /api/enquiries/8/claim  →  Status: 409 (9357.64 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #80 PATCH /api/enquiries/8/claim  →  Status: 409 (9712.92 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #81 PATCH /api/enquiries/9/claim  →  Status: 200 (3672.88 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 9,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964112101_gyofpghj6w@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Concurrency iteration 5",
+    │                          "claimedById": 3,
+    │                          "claimedAt": "2026-10-14T07:48:33.957Z",
+    │                          "createdAt": "2026-10-14T07:48:32.103Z",
+    │                          "updatedAt": "2026-10-14T07:48:33.958Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #82 PATCH /api/enquiries/9/claim  →  Status: 409 (4091.11 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #83 PATCH /api/enquiries/9/claim  →  Status: 409 (4132.97 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #84 PATCH /api/enquiries/9/claim  →  Status: 409 (4132.84 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #85 PATCH /api/enquiries/9/claim  →  Status: 409 (4141.06 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #86 PATCH /api/enquiries/9/claim  →  Status: 409 (4139.05 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #87 PATCH /api/enquiries/9/claim  →  Status: 409 (4421.51 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #88 PATCH /api/enquiries/9/claim  →  Status: 409 (4785.95 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #89 PATCH /api/enquiries/9/claim  →  Status: 409 (5164.47 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #90 PATCH /api/enquiries/9/claim  →  Status: 409 (5449.63 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #91 PATCH /api/enquiries/9/claim  →  Status: 409 (5802.01 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #92 PATCH /api/enquiries/9/claim  →  Status: 409 (6154.45 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #93 PATCH /api/enquiries/9/claim  →  Status: 409 (6495.3 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #94 PATCH /api/enquiries/9/claim  →  Status: 409 (6875.87 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #95 PATCH /api/enquiries/9/claim  →  Status: 409 (7630.27 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #96 PATCH /api/enquiries/9/claim  →  Status: 409 (7653.21 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #97 PATCH /api/enquiries/9/claim  →  Status: 409 (8375.92 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #98 PATCH /api/enquiries/9/claim  →  Status: 409 (8402.32 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #99 PATCH /api/enquiries/9/claim  →  Status: 409 (9106.08 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #100 PATCH /api/enquiries/9/claim  →  Status: 409 (9134.32 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Enquiry Claim Concurrency Suite 6. PATCH /api/enquiries/99999999999/claim (above 32-bit int max) must return 422 or 404, never 500 (11 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/99999999999/claim  →  Status: 422 (7.38 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Validation failed",
+    │                        "errors": [
+    │                          {
+    │                            "field": "id",
+    │                            "message": "Enquiry ID must be a positive integer"
+    │                          }
+    │                        ]
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+[SUITE] tests\enquiry.test.js  —  PASSED (73.91s)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+  ✔ [PASS] POST /api/enquiries (public form) 201 — works without a token (1840 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/enquiries  →  Status: 201 (1829.66 ms)
+    │     Input Body    : {
+    │                       "name": "Rahul Sharma",
+    │                       "email": "rahul@example.com",
+    │                       "courseInterest": "Data Science",
+    │                       "message": "Interested in weekend batch."
+    │                     }
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 1,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "rahul@example.com",
+    │                          "phone": null,
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Interested in weekend batch.",
+    │                          "claimedById": null,
+    │                          "claimedAt": null,
+    │                          "createdAt": "2026-10-14T07:48:53.895Z",
+    │                          "updatedAt": "2026-10-14T07:48:53.895Z"
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/enquiries (public form) 422 — missing required fields (27 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/enquiries  →  Status: 422 (21.28 ms)
+    │     Input Body    : {
+    │                       "name": ""
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Validation failed",
+    │                        "errors": [
+    │                          {
+    │                            "field": "name",
+    │                            "message": "Name is required"
+    │                          },
+    │                          {
+    │                            "field": "email",
+    │                            "message": "Email is required"
+    │                          },
+    │                          {
+    │                            "field": "email",
+    │                            "message": "Invalid email address"
+    │                          },
+    │                          {
+    │                            "field": "courseInterest",
+    │                            "message": "Course interest is required"
+    │                          }
+    │                        ]
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/enquiries (public form) 422 — invalid email (16 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/enquiries  →  Status: 422 (11.5 ms)
+    │     Input Body    : {
+    │                       "name": "Bad Email",
+    │                       "email": "not-an-email",
+    │                       "courseInterest": "Web Dev"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Validation failed",
+    │                        "errors": [
+    │                          {
+    │                            "field": "email",
+    │                            "message": "Invalid email address"
+    │                          }
+    │                        ]
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/enquiries (public form) 422 — invalid phone returns 422 (12 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/enquiries  →  Status: 422 (8.04 ms)
+    │     Input Body    : {
+    │                       "name": "Bad Phone User",
+    │                       "email": "badphone@test.com",
+    │                       "courseInterest": "Data Science",
+    │                       "phone": "invalid-phone-format"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Validation failed",
+    │                        "errors": [
+    │                          {
+    │                            "field": "phone",
+    │                            "message": "Invalid phone number (7–15 digits, may include +, spaces, dashes)"
+    │                          }
+    │                        ]
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/enquiries (public form) 422 — message over 1000 characters returns 422 (11 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/enquiries  →  Status: 422 (8.51 ms)
+    │     Input Body    : {
+    │                       "name": "Long Message User",
+    │                       "email": "longmsg@test.com",
+    │                       "courseInterest": "Data Science",
+    │                       "message": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Validation failed",
+    │                        "errors": [
+    │                          {
+    │                            "field": "message",
+    │                            "message": "Message must be at most 1000 characters"
+    │                          }
+    │                        ]
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] GET /api/enquiries/* — auth guard 401 on /public without token (12 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public  →  Status: 401 (9.29 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Authentication required. Provide a Bearer token."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] GET /api/enquiries/* — auth guard 401 on /my without token (13 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/my  →  Status: 401 (9.28 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Authentication required. Provide a Bearer token."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] PATCH /api/enquiries/:id/claim claimed enquiry disappears from /public for other users (7853 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/2/claim  →  Status: 200 (3522.41 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 2,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964135773_2ir8pu1nkz5@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:48:57.544Z",
+    │                          "createdAt": "2026-10-14T07:48:55.775Z",
+    │                          "updatedAt": "2026-10-14T07:48:57.545Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 GET /api/enquiries/public  →  Status: 200 (2556.49 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [
+    │                          {
+    │                            "id": 1,
+    │                            "name": "Rahul Sharma",
+    │                            "email": "rahul@example.com",
+    │                            "phone": null,
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Interested in weekend batch.",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:48:53.895Z",
+    │                            "updatedAt": "2026-10-14T07:48:53.895Z"
+    │                          }
+    │                        ],
+    │                        "pagination": {
+    │                          "total": 1,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 1,
+    │                          "hasNextPage": false,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] PATCH /api/enquiries/:id/claim claimed enquiry appears in /my for the owner (8344 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/3/claim  →  Status: 200 (3550.48 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 3,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964143629_tmt21sql2j@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:49:05.848Z",
+    │                          "createdAt": "2026-10-14T07:49:03.631Z",
+    │                          "updatedAt": "2026-10-14T07:49:05.848Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 GET /api/enquiries/my  →  Status: 200 (2569.44 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [
+    │                          {
+    │                            "id": 3,
+    │                            "name": "Rahul Sharma",
+    │                            "email": "enq_1791964143629_tmt21sql2j@example.com",
+    │                            "phone": "+91 98765 43210",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Test enquiry message",
+    │                            "claimedById": 1,
+    │                            "claimedAt": "2026-10-14T07:49:05.848Z",
+    │                            "createdAt": "2026-10-14T07:49:03.631Z",
+    │                            "updatedAt": "2026-10-14T07:49:05.848Z"
+    │                          },
+    │                          {
+    │                            "id": 2,
+    │                            "name": "Rahul Sharma",
+    │                            "email": "enq_1791964135773_2ir8pu1nkz5@example.com",
+    │                            "phone": "+91 98765 43210",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Test enquiry message",
+    │                            "claimedById": 1,
+    │                            "claimedAt": "2026-10-14T07:48:57.544Z",
+    │                            "createdAt": "2026-10-14T07:48:55.775Z",
+    │                            "updatedAt": "2026-10-14T07:48:57.545Z"
+    │                          }
+    │                        ],
+    │                        "pagination": {
+    │                          "total": 2,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 1,
+    │                          "hasNextPage": false,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] PATCH /api/enquiries/:id/claim claimed enquiry does NOT appear in /my for another user (7956 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/4/claim  →  Status: 200 (3633.47 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 4,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964151976_wkjrkrs6mhi@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:49:13.808Z",
+    │                          "createdAt": "2026-10-14T07:49:11.978Z",
+    │                          "updatedAt": "2026-10-14T07:49:13.810Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 GET /api/enquiries/my  →  Status: 200 (2489.24 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [],
+    │                        "pagination": {
+    │                          "total": 0,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 1,
+    │                          "hasNextPage": false,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] PATCH /api/enquiries/:id/claim 409 — claiming an enquiry already owned by someone else (14368 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/5/claim  →  Status: 200 (6721.61 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 5,
+    │                          "name": "Rahul Sharma",
+    │                          "email": "enq_1791964159932_xrchnsynh9a@example.com",
+    │                          "phone": "+91 98765 43210",
+    │                          "courseInterest": "Data Science",
+    │                          "message": "Test enquiry message",
+    │                          "claimedById": 1,
+    │                          "claimedAt": "2026-10-14T07:49:23.123Z",
+    │                          "createdAt": "2026-10-14T07:49:19.933Z",
+    │                          "updatedAt": "2026-10-14T07:49:23.124Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 PATCH /api/enquiries/5/claim  →  Status: 409 (4455.92 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "This enquiry has already been claimed by another counselor."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] PATCH /api/enquiries/:id/claim 422 — non-integer :id (14 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 PATCH /api/enquiries/abc/claim  →  Status: 422 (9.77 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Validation failed",
+    │                        "errors": [
+    │                          {
+    │                            "field": "id",
+    │                            "message": "Enquiry ID must be a positive integer"
+    │                          }
+    │                        ]
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Pagination returns correct pagination meta (3079 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public?page=1&limit=5  →  Status: 200 (3073.58 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [
+    │                          {
+    │                            "id": 17,
+    │                            "name": "Lead 12",
+    │                            "email": "lead_12_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 12",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 16,
+    │                            "name": "Lead 11",
+    │                            "email": "lead_11_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 11",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 15,
+    │                            "name": "Lead 10",
+    │                            "email": "lead_10_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 10",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 14,
+    │                            "name": "Lead 9",
+    │                            "email": "lead_9_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 9",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 13,
+    │                            "name": "Lead 8",
+    │                            "email": "lead_8_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 8",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          }
+    │                        ],
+    │                        "pagination": {
+    │                          "total": 13,
+    │                          "page": 1,
+    │                          "limit": 5,
+    │                          "totalPages": 3,
+    │                          "hasNextPage": true,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Pagination caps limit at 100 and returns 200 (coercion, not rejection) (3515 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public?limit=9999  →  Status: 200 (3510.07 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [
+    │                          {
+    │                            "id": 17,
+    │                            "name": "Lead 12",
+    │                            "email": "lead_12_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 12",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 16,
+    │                            "name": "Lead 11",
+    │                            "email": "lead_11_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 11",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 15,
+    │                            "name": "Lead 10",
+    │                            "email": "lead_10_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 10",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 14,
+    │                            "name": "Lead 9",
+    │                            "email": "lead_9_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 9",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 13,
+    │                            "name": "Lead 8",
+    │                            "email": "lead_8_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 8",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 12,
+    │                            "name": "Lead 7",
+    │                            "email": "lead_7_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 7",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 11,
+    │                            "name": "Lead 6",
+    │                            "email": "lead_6_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 6",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 10,
+    │                            "name": "Lead 5",
+    │                            "email": "lead_5_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 5",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 9,
+    │                            "name": "Lead 4",
+    │                            "email": "lead_4_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 4",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 8,
+    │                            "name": "Lead 3",
+    │                            "email": "lead_3_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 3",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 7,
+    │                            "name": "Lead 2",
+    │                            "email": "lead_2_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 2",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 6,
+    │                            "name": "Lead 1",
+    │                            "email": "lead_1_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 1",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 1,
+    │                            "name": "Rahul Sharma",
+    │                            "email": "rahul@example.com",
+    │                            "phone": null,
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Interested in weekend batch.",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:48:53.895Z",
+    │                            "updatedAt": "2026-10-14T07:48:53.895Z"
+    │                          }
+    │                        ],
+    │                        "pagination": {
+    │                          "total": 13,
+    │                          "page": 1,
+    │                          "limit": 100,
+    │                          "totalPages": 1,
+    │                          "hasNextPage": false,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Pagination invalid page coerces to 1 (3086 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public?page=abc  →  Status: 200 (3080.03 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [
+    │                          {
+    │                            "id": 17,
+    │                            "name": "Lead 12",
+    │                            "email": "lead_12_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 12",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 16,
+    │                            "name": "Lead 11",
+    │                            "email": "lead_11_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 11",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 15,
+    │                            "name": "Lead 10",
+    │                            "email": "lead_10_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 10",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 14,
+    │                            "name": "Lead 9",
+    │                            "email": "lead_9_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 9",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 13,
+    │                            "name": "Lead 8",
+    │                            "email": "lead_8_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 8",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 12,
+    │                            "name": "Lead 7",
+    │                            "email": "lead_7_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 7",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 11,
+    │                            "name": "Lead 6",
+    │                            "email": "lead_6_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 6",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 10,
+    │                            "name": "Lead 5",
+    │                            "email": "lead_5_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 5",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 9,
+    │                            "name": "Lead 4",
+    │                            "email": "lead_4_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 4",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 8,
+    │                            "name": "Lead 3",
+    │                            "email": "lead_3_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 3",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          }
+    │                        ],
+    │                        "pagination": {
+    │                          "total": 13,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 2,
+    │                          "hasNextPage": true,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Pagination limit=0 coerces to default limit 10 (3543 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public?limit=0  →  Status: 200 (3536.45 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [
+    │                          {
+    │                            "id": 17,
+    │                            "name": "Lead 12",
+    │                            "email": "lead_12_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 12",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 16,
+    │                            "name": "Lead 11",
+    │                            "email": "lead_11_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 11",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 15,
+    │                            "name": "Lead 10",
+    │                            "email": "lead_10_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 10",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 14,
+    │                            "name": "Lead 9",
+    │                            "email": "lead_9_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 9",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 13,
+    │                            "name": "Lead 8",
+    │                            "email": "lead_8_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 8",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 12,
+    │                            "name": "Lead 7",
+    │                            "email": "lead_7_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 7",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 11,
+    │                            "name": "Lead 6",
+    │                            "email": "lead_6_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 6",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 10,
+    │                            "name": "Lead 5",
+    │                            "email": "lead_5_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 5",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 9,
+    │                            "name": "Lead 4",
+    │                            "email": "lead_4_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 4",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 8,
+    │                            "name": "Lead 3",
+    │                            "email": "lead_3_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 3",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          }
+    │                        ],
+    │                        "pagination": {
+    │                          "total": 13,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 2,
+    │                          "hasNextPage": true,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Pagination limit=abc coerces to default limit 10 (3544 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public?limit=abc  →  Status: 200 (3538.35 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [
+    │                          {
+    │                            "id": 17,
+    │                            "name": "Lead 12",
+    │                            "email": "lead_12_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 12",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 16,
+    │                            "name": "Lead 11",
+    │                            "email": "lead_11_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 11",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 15,
+    │                            "name": "Lead 10",
+    │                            "email": "lead_10_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 10",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 14,
+    │                            "name": "Lead 9",
+    │                            "email": "lead_9_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 9",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 13,
+    │                            "name": "Lead 8",
+    │                            "email": "lead_8_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 8",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 12,
+    │                            "name": "Lead 7",
+    │                            "email": "lead_7_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 7",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 11,
+    │                            "name": "Lead 6",
+    │                            "email": "lead_6_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 6",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 10,
+    │                            "name": "Lead 5",
+    │                            "email": "lead_5_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 5",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 9,
+    │                            "name": "Lead 4",
+    │                            "email": "lead_4_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 4",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 8,
+    │                            "name": "Lead 3",
+    │                            "email": "lead_3_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 3",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          }
+    │                        ],
+    │                        "pagination": {
+    │                          "total": 13,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 2,
+    │                          "hasNextPage": true,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Pagination page=-5 coerces to page 1 (3142 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public?page=-5  →  Status: 200 (3135.02 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": [
+    │                          {
+    │                            "id": 17,
+    │                            "name": "Lead 12",
+    │                            "email": "lead_12_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 12",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 16,
+    │                            "name": "Lead 11",
+    │                            "email": "lead_11_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 11",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 15,
+    │                            "name": "Lead 10",
+    │                            "email": "lead_10_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 10",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 14,
+    │                            "name": "Lead 9",
+    │                            "email": "lead_9_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 9",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 13,
+    │                            "name": "Lead 8",
+    │                            "email": "lead_8_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 8",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 12,
+    │                            "name": "Lead 7",
+    │                            "email": "lead_7_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 7",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 11,
+    │                            "name": "Lead 6",
+    │                            "email": "lead_6_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 6",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 10,
+    │                            "name": "Lead 5",
+    │                            "email": "lead_5_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 5",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 9,
+    │                            "name": "Lead 4",
+    │                            "email": "lead_4_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 4",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          },
+    │                          {
+    │                            "id": 8,
+    │                            "name": "Lead 3",
+    │                            "email": "lead_3_lmohb@example.com",
+    │                            "phone": "+91 98765 00000",
+    │                            "courseInterest": "Data Science",
+    │                            "message": "Bulk lead 3",
+    │                            "claimedById": null,
+    │                            "claimedAt": null,
+    │                            "createdAt": "2026-10-14T07:49:34.318Z",
+    │                            "updatedAt": "2026-10-14T07:49:34.318Z"
+    │                          }
+    │                        ],
+    │                        "pagination": {
+    │                          "total": 13,
+    │                          "page": 1,
+    │                          "limit": 10,
+    │                          "totalPages": 2,
+    │                          "hasNextPage": true,
+    │                          "hasPrevPage": false
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] Rate Limiting on POST /api/enquiries returns 429 once the submission limit is exceeded on isolated test instance (69 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/enquiries  →  Status: 201 (16.12 ms)
+    │     Input Body    : {
+    │                       "name": "Lead 1"
+    │                     }
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "name": "Lead 1"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 POST /api/enquiries  →  Status: 201 (11.06 ms)
+    │     Input Body    : {
+    │                       "name": "Lead 2"
+    │                     }
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "name": "Lead 2"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #3 POST /api/enquiries  →  Status: 429 (10.72 ms)
+    │     Input Body    : {
+    │                       "name": "Lead 3"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Too many submissions. Please try again later."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+[SUITE] tests\auth.test.js  —  PASSED (35.96s)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+  ✔ [PASS] POST /api/auth/register 201 — registers successfully, response has no passwordHash (4668 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/auth/register  →  Status: 201 (4654.3 ms)
+    │     Input Body    : {
+    │                       "name": "Asha Verma",
+    │                       "email": "asha_reg@company.com",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 1,
+    │                          "name": "Asha Verma",
+    │                          "email": "asha_reg@company.com",
+    │                          "createdAt": "2026-10-14T07:50:07.619Z"
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/auth/register 409 — duplicate email (6868 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/auth/register  →  Status: 201 (4630.84 ms)
+    │     Input Body    : {
+    │                       "name": "Dup User",
+    │                       "email": "dup@company.com",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 2,
+    │                          "name": "Dup User",
+    │                          "email": "dup@company.com",
+    │                          "createdAt": "2026-10-14T07:50:12.277Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 POST /api/auth/register  →  Status: 409 (2225.19 ms)
+    │     Input Body    : {
+    │                       "name": "Dup User 2",
+    │                       "email": "dup@company.com",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "An account with this email already exists."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/auth/register 409 — duplicate email, different letter case (7769 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/auth/register  →  Status: 201 (5080.74 ms)
+    │     Input Body    : {
+    │                       "name": "Case User",
+    │                       "email": "casecheck@company.com",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "id": 3,
+    │                          "name": "Case User",
+    │                          "email": "casecheck@company.com",
+    │                          "createdAt": "2026-10-14T07:50:19.077Z"
+    │                        }
+    │                      }
+    │  --------------------------------------------------------------------------------
+    │  #2 POST /api/auth/register  →  Status: 409 (2676.02 ms)
+    │     Input Body    : {
+    │                       "name": "Case User 2",
+    │                       "email": "CASECHECK@COMPANY.COM",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "An account with this email already exists."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/auth/register 422 — short password returns validation errors (29 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/auth/register  →  Status: 422 (17.09 ms)
+    │     Input Body    : {
+    │                       "name": "Short",
+    │                       "email": "short@test.com",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Validation failed",
+    │                        "errors": [
+    │                          {
+    │                            "field": "password",
+    │                            "message": "Password must be at least 8 characters"
+    │                          }
+    │                        ]
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/auth/register 422 — missing name (28 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/auth/register  →  Status: 422 (20.34 ms)
+    │     Input Body    : {
+    │                       "email": "noname@test.com",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Validation failed",
+    │                        "errors": [
+    │                          {
+    │                            "field": "name",
+    │                            "message": "Name is required"
+    │                          }
+    │                        ]
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/auth/login 200 — succeeds and returns a JWT token; no passwordHash in response (2434 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/auth/login  →  Status: 200 (2428.97 ms)
+    │     Input Body    : {
+    │                       "email": "login_test@company.com",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": true,
+    │                        "data": {
+    │                          "token": "***[REDACTED]***",
+    │                          "employee": {
+    │                            "id": 4,
+    │                            "name": "Login Test",
+    │                            "email": "login_test@company.com"
+    │                          }
+    │                        }
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/auth/login 401 — wrong password returns generic "Invalid credentials" (3298 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/auth/login  →  Status: 401 (3295.49 ms)
+    │     Input Body    : {
+    │                       "email": "login_test@company.com",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Invalid credentials"
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] POST /api/auth/login 401 — unknown email returns the same generic "Invalid credentials" (2361 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 POST /api/auth/login  →  Status: 401 (2357.61 ms)
+    │     Input Body    : {
+    │                       "email": "nobody@company.com",
+    │                       "password": "***[REDACTED]***"
+    │                     }
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Invalid credentials"
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] JWT Authentication Edge Cases 401 — expired JWT returns 401 (15 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public  →  Status: 401 (11.06 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Token has expired. Please log in again."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] JWT Authentication Edge Cases 401 — malformed JWT returns 401 (13 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public  →  Status: 401 (7.56 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Invalid token. Please log in again."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+  ✔ [PASS] JWT Authentication Edge Cases 401 — token with wrong signature returns 401 (16 ms)
+    ┌─ API REQUEST & RESPONSE AUDIT:
+    │  #1 GET /api/enquiries/public  →  Status: 401 (9.22 ms)
+    │     Input Body    : [None / Empty]
+    │     Output Response: {
+    │                        "success": false,
+    │                        "message": "Invalid token. Please log in again."
+    │                      }
+    └────────────────────────────────────────────────────────────────────────────────────────
+
+====================================================================================================
+                                    END OF AUDIT REPORT
+====================================================================================================
